@@ -11,5 +11,99 @@ main {
     margin: 0px auto;
     height: 100%;
     width: 90%;
-    background: beige;   
+    background: beige;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 10% 90%;
+    grid-template-areas:
+    "aside search"
+    "aside product";
+}
+
+
+.sidebar {
+    grid-area: aside;
+    width: 100%;
+    height: 100%;
+    background: rgb(223, 223, 218);
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.sidebar ul {
+    list-style: none;
+    align-self: flex-start;
+    padding: 15px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    height: 100%;
+    width: 100%;
+}
+
+.sidebar ul li {
+    border: 1px gray solid;
+    width: 100%;
+    height: 100%;
+
+}
+
+.sidebar h2 {
+    height: 10%;
+    padding: 5px;
+}
+
+.sidebar mat-slider {
+    width: 100%;
+    color: white;
+}
+
+.sidebar li mat-accordion{
+    height: 100%;
+}
+
+.filter {
+    text-transform: uppercase;
+}
+
+
+
+
+
+.search-bar {
+    padding: 0px 20px;
+    grid-area: search;
+    width: 100%;
+    height: 100%;
+    background: rgb(255, 255, 241);
+}
+
+.search-bar input {
+    border-left: none;
+    outline: none;
+    border-top-right-radius: 1em;
+    border-bottom-right-radius: 1em;
+    width: 80%;
+    height: 100%;
+    padding: 10px;
+}
+
+.search-bar fa-icon {
+    border: 2px black solid;
+    border-right: none;
+    background: white;
+    border-top-left-radius: 1em;
+    border-bottom-left-radius: 1em;
+    width: 5%;
+    height: 100%;
+    padding: 14px;
+    
+}
+
+.products {
+    grid-area: product;
+    width: 100%;
+    height: 100%;
+    background: beige;
 }
