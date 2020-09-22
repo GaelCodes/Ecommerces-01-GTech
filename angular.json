@@ -144,6 +144,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Ecommerces-GTech"
+    }
+  },
+  "defaultProject": "Ecommerces-GTech",
+  "cli": {
+    "analytics": false
+  }
 }

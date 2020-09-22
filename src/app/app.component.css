@@ -1,0 +1,15 @@
+main {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    height: 90vh;
+    width: 100%;
+    background: rgb(233, 233, 185);
+    
+}
+
+#Contenido {
+    margin: 0px auto;
+    height: 100%;
+    width: 90%;
+    background: beige;   
+}
