@@ -1,0 +1,11 @@
+footer {
+    background: rgb(17, 17, 17);
+    height: 100px;
+}
+
+.content {
+    height: 100%;
+    width: 90%;
+    margin: 0px auto;
+    background: rgb(31, 31, 31);
+}
