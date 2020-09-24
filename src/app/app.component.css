@@ -1,7 +1,6 @@
 main {
     padding-top: 50px;
     padding-bottom: 50px;
-    height: 90vh;
     width: 100%;
     background: rgb(233, 233, 185);
     
@@ -14,78 +13,35 @@ main {
     background: beige;
     display: grid;
     grid-template-columns: 20% 80%;
-    grid-template-rows: 10% 90%;
+    grid-template-rows: 9vh;
     grid-template-areas:
     "aside search"
     "aside product";
 }
 
-
-.sidebar {
+app-sidebar {
     grid-area: aside;
-    width: 100%;
-    height: 100%;
-    background: rgb(223, 223, 218);
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
 }
-
-.sidebar ul {
-    list-style: none;
-    align-self: flex-start;
-    padding: 15px;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-around;
-    height: 100%;
-    width: 100%;
-}
-
-.sidebar ul li {
-    border: 1px gray solid;
-    width: 100%;
-    height: 100%;
-
-}
-
-.sidebar h2 {
-    height: 10%;
-    padding: 5px;
-}
-
-.sidebar mat-slider {
-    width: 100%;
-    color: white;
-}
-
-.sidebar li mat-accordion{
-    height: 100%;
-}
-
-.filter {
-    text-transform: uppercase;
-}
-
-
-
-
 
 .search-bar {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
     padding: 0px 20px;
     grid-area: search;
     width: 100%;
-    height: 100%;
     background: rgb(255, 255, 241);
+    font-size: 16px;
+    height: 100%;
 }
 
 .search-bar input {
+    border: 2px black solid;
     border-left: none;
     outline: none;
     border-top-right-radius: 1em;
     border-bottom-right-radius: 1em;
-    width: 80%;
-    height: 100%;
+    width: 60%;
     padding: 10px;
 }
 
@@ -96,14 +52,105 @@ main {
     border-top-left-radius: 1em;
     border-bottom-left-radius: 1em;
     width: 5%;
-    height: 100%;
-    padding: 14px;
-    
+    font-size: 16.5px;
+    padding: 10px;
 }
 
 .products {
+    margin-bottom: 100px;
+    margin-top: 50px;
+    padding: 1em;
     grid-area: product;
     width: 100%;
     height: 100%;
     background: beige;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 22% 22% 22% 22%;
+    grid-template-rows: 200px;
+    grid-auto-columns: 200px;
+    grid-auto-rows: 200px;
+    grid-auto-flow: row;
+    column-gap: 20px;
+    row-gap: 20px;
+}
+
+.prod-card {
+    font-size: 16px;
+    color: black;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 1em;
+}
+
+.prod-card img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 1em;
+    z-index: 1;
+}
+
+.prod-card .prod-info {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 5;
+}
+
+.prod-card .prod-info .valoration{
+    position: absolute;
+    width: 100%;
+    top: 10%;
+    text-align: center;
+    font-size: 30px;
+}
+
+.prod-card .prod-info .prod-name{
+    font-weight: 500;
+    background: rgba(255, 255, 255, 0.37);
+    position: absolute;
+    bottom: 10%;
+    width: 80%;
+    right: 0px;
+    text-align: center;
+    padding: 5px 0px;
+}
+
+.prod-card .prod-info .price {
+    padding: 5px 0px;
+    background: rgba(255, 255, 255, 0.37);
+    font-weight: bold;
+    font-size: 20px;
+    position: absolute;
+    text-align: right;
+    bottom: 10%;
+    width: 20%;
+    left:0px;
+}
+
+.prod-card .prod-info .availability {
+    position: absolute;
+    font-size: 14px;
+    text-align: center;
+    border-bottom-right-radius: 1em;
+    border-bottom-left-radius: 1em;
+    width: 100%;
+    bottom: 0px;
+    left:0px;
+    color: black;
+    background: rgba(128, 255, 0, 0.753);
+}
+
+.prod-card .prod-info .buy {
+    outline: none;
+    padding: 5px;
+    padding-right: 10px;
+    padding-top: 10px;
+    background: rgba(255, 255, 255, 0.37);
+    border: none;
+    border-top-right-radius: 1em;
+    position: absolute;
+    right: 0px;
 }

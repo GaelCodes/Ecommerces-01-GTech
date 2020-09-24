@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
 
 @Component({
@@ -10,7 +11,7 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
 export class AppComponent {
   title = 'Ecommerces-GTech';
 
-  
+  faShoppingCart = faShoppingCart;
   faSearch = faSearch;
 
 }

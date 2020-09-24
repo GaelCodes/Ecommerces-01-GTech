@@ -3,100 +3,8 @@
     <app-header></app-header>
     <main>
         <div id="Contenido">
-            <div class="sidebar">
-                <h2> Filtros </h2>
-                <ul>
 
-                    <li>
-                        <mat-accordion>
-                            <mat-expansion-panel>
-                                <mat-expansion-panel-header>
-                                    <mat-panel-title class="filter">
-                                        Categorías
-                                    </mat-panel-title>
-                                </mat-expansion-panel-header>
-                                <label><input type="checkbox" id="cbox1" value="teclados"> Teclados </label>
-                                <br>
-                                <label><input type="checkbox" id="cbox1" value="ratones"> Ratones </label>
-                            </mat-expansion-panel>
-                        </mat-accordion>
-                    </li>
-
-                    <!-- <li>
-                        <p class="filter">SubCategoría</p>
-                    </li> -->
-
-                    <li>
-
-                        <mat-accordion>
-                            <mat-expansion-panel>
-                                <mat-expansion-panel-header>
-                                    <mat-panel-title class="filter">
-                                        Precio
-                                    </mat-panel-title>
-                                </mat-expansion-panel-header>
-                                Min
-                                <mat-slider min="0" max="1000" step="1" value="500" thumbLabel></mat-slider>
-                                Max
-                                <mat-slider min="0" max="1000" step="1" value="500" thumbLabel></mat-slider>
-                            </mat-expansion-panel>
-                        </mat-accordion>
-                    </li>
-
-                    <li>
-                        <mat-accordion>
-                            <mat-expansion-panel>
-                                <mat-expansion-panel-header>
-                                    <mat-panel-title class="filter">
-                                        Marcas
-                                    </mat-panel-title>
-                                </mat-expansion-panel-header>
-                                <label><input type="checkbox" id="cbox1" value="teclados"> Razer </label>
-                                <br>
-                                <label><input type="checkbox" id="cbox1" value="ratones"> Nvidia </label>
-                            </mat-expansion-panel>
-                        </mat-accordion>
-                    </li>
-
-                    <li>                    
-                        <mat-accordion>
-                            <mat-expansion-panel>
-                                <mat-expansion-panel-header>
-                                    <mat-panel-title class="filter">
-                                        Valoraciones
-                                    </mat-panel-title>
-                                </mat-expansion-panel-header>
-                                <mat-slider min="1" max="5" step="0.5" value="1" thumbLabel tickInterval="0.5"></mat-slider>
-                            </mat-expansion-panel>
-                        </mat-accordion>
-                    </li>
-
-                    <li>
-
-                        <mat-accordion>
-                            <mat-expansion-panel>
-                                <mat-expansion-panel-header>
-                                    <mat-panel-title class="filter">
-                                        Disponibilidad
-                                    </mat-panel-title>
-                                </mat-expansion-panel-header>
-                                
-                                <div>
-                                    <input type="radio" id="disponible" name="disponibilidad" value="disponible">
-                                    <label for="disponible">Disponible</label>
-                                </div>
-        
-                                <div>
-                                    <input type="radio" id="indiferente" name="disponibilidad" value="indiferente" checked>
-                                    <label for="indiferente">Indiferente</label>
-                                </div>
-
-                            </mat-expansion-panel>
-                        </mat-accordion>                       
-                    </li>
-
-                </ul>
-            </div>
+            <app-sidebar></app-sidebar>
 
             <div class="search-bar">
                 <fa-icon [icon]="faSearch"></fa-icon>
@@ -104,7 +12,26 @@
             </div>
 
             <div class="products">
-
+                <div class="prod-card" *ngFor="let card of [1,1,1,1,1,1,1,1,1,1,1,1]">
+                    <img src="https://dummyimage.com/100x200/d932d9/1d23de.png" alt="">
+                    <div class="prod-info">
+                        <div class="valoration">
+                            * * * * *
+                        </div>
+                        <div class="price">
+                            50€
+                        </div>
+                        <div class="prod-name">
+                            Razer Dark Mamba
+                        </div>
+                        <div class="availability">
+                            Disponible
+                        </div>
+                        <button class="buy"> 
+                            <fa-icon [icon]="faShoppingCart"></fa-icon>
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
